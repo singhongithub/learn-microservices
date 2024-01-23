@@ -1,4 +1,4 @@
-# learn-microservices
+# learn-microservices-with-docker
 Welcome to my microservices project! This project is designed to provide exchange rates and currency conversion with a modular and scalable architecture. We are using Spring Boot V3 to build the microservices & making use of Docker to run Zipkin (Distributed Tracing). We can also run the various microservices under this project in Docker.
 Below, you'll find a brief overview of the key components:
 
