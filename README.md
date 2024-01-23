@@ -38,10 +38,36 @@ Welcome to my microservices project! This project is designed to provide exchang
 
 - Access the API Gateway to interact with the microservices.
 
+- ## URLS
 
-## Issues
+#### Currency Exchange Service
+- http://localhost:8000/currency-exchange/from/USD/to/INR
 
-If you encounter any issues or have suggestions, please open an issue on the repository.
+#### Currency Conversion Service
+- http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+- http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+#### Eureka
+- http://localhost:8761/
+
+#### Zipkin
+- http://localhost:9411/
+
+#### API GATEWAY
+- http://localhost:8765/currency-exchange/from/USD/to/INR
+- http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+- http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+- http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+
+#### Commands
+```
+docker run -p 9411:9411 openzipkin/zipkin:2.23
+docker push docker.io/ajayondocker/ms-currency-exchange-service:0.0.1-SNAPSHOT
+docker-compose --version
+docker-compose up
+docker push ajayondocker/ms-naming-server:0.0.1-SNAPSHOT
+docker push ajayondocker/ms-currency-conversion-service:0.0.1-SNAPSHOT
+docker push ajayondocker/ms-api-gateway:0.0.1-SNAPSHOT
 
 
 
